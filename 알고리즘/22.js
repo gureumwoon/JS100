@@ -11,11 +11,26 @@
 // 123	6
 // 987	24
 
+// function solution(n) {
+//     var answer = 0;
+
+//     answer = n.toString().split("").reduce((prev, cur) => prev + Number(cur), 0)
+
+//     return answer;
+// }
+
+
 function solution(n) {
-    var answer = 0;
-
-    answer = n.toString().split("").reduce((prev, cur) => prev + Number(cur), 0)
-
-    return answer;
+    let result = 0;
+    result = n.toString().split("").reverse().reduce((prev, cur) => prev + Number(cur), 0).join("")
+    return result
 }
 
+
+function solution(n) {
+    let result = ""
+    result = String(n).split("").reverse()
+    sum = result.reduce((prev, cur) => prev + Number(cur), 0)
+    return `${result[0]} + ${result[1]} + ${result[2]} + ${result[3]} + ${result[4]} + ${result[5]} = ${sum}`
+}
+console.log(solution(718253))

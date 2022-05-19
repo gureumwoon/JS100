@@ -9,3 +9,7 @@
 // 입출력 예
 // s	return
 // "Zbcdefg"	"gfedcbZ"
+
+function solution(s) {
+    return s.split("").sort().reverse().join("")
+}
